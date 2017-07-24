@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("p").click(function(){
-        value = $('p').html()
+        localstorage.hello = $('p').html()
         console.log(value)
         // alert("hello")
         $.ajax({
@@ -12,7 +12,6 @@ $(document).ready(function(){
             $('#mydiv').html(data);
         }
     });
-    // $("mydiv").append("<p>"+value+"</p>")
-    // })
+    $("#mydiv").innerHTML = localStorage.hello
 });
 })
